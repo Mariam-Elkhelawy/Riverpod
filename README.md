@@ -61,5 +61,5 @@ While `Consumer` is effective for updating specific sections of the UI, using `C
 2. Navigate to the project directory:
 
    ```bash
-cd Riverpod-StateManagement
+   cd Riverpod-StateManagement
 
