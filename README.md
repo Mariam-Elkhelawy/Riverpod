@@ -1,8 +1,6 @@
-# Advanced Flutter Challenge: 20 Steps to Enhance My Skills 🚀
+# Riverpod State Management 🚀
 
-Welcome to the Advanced Flutter Challenge repository! This challenge consists of 20 steps designed to enhance your Flutter skills. This repository focuses on Riverpod state management, specifically through two different approaches: `ConsumerWidget` and `Consumer`.
-
-## Challenge 2: Riverpod State Management
+This repository focuses on Riverpod state management, specifically through two different approaches: `ConsumerWidget` and `Consumer`. This is part of my **Advanced Flutter Challenge: 20 Steps to Enhance My Skills**.
 
 ## **Part 1: Using `ConsumerWidget`**
 
