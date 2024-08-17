@@ -23,16 +23,16 @@ In this part, we explore state management in Flutter using Riverpod with `Consum
 
      ```dart
      class HomeScreen extends ConsumerWidget {
-  @override
-  Widget build(BuildContext context, WidgetRef ref) {
-    final isLightThemeEnabled = ref.watch(isLightTheme);
+      @override
+      Widget build(BuildContext context, WidgetRef ref) {
+         final isLightThemeEnabled = ref.watch(isLightTheme);
 
-    return MaterialApp(
-      themeMode: isLightThemeEnabled ? ThemeMode.light : ThemeMode.dark,
-      // other properties
-    );
-  }
-}
+       return MaterialApp(
+          themeMode: isLightThemeEnabled ? ThemeMode.light : ThemeMode.dark,
+          // other properties
+          );
+         }
+       }
 
 4. **Using `ref.read(...)`:**
    - `read` accesses the current state of a provider without listening to its changes. It’s typically used in event handlers where you don’t need to rebuild the UI.
