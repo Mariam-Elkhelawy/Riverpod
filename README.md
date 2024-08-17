@@ -131,3 +131,7 @@ While `Consumer` is effective for updating specific sections of the UI, using `C
 
    ```bash
    flutter run
+
+## Contributing
+
+Feel free to open issues, submit pull requests, or provide feedback to improve this challenge!
