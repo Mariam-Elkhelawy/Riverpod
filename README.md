@@ -23,25 +23,30 @@ In this part, we explore state management in Flutter using Riverpod with `Consum
 
      ```dart
      class HomeScreen extends ConsumerWidget {
-      @override
-      Widget build(BuildContext context, WidgetRef ref) {
-         final isLightThemeEnabled = ref.watch(isLightTheme);
+      const HomeScreen({super.key});
+       @override
+       Widget build(BuildContext context, WidgetRef ref) {
+        return Scaffold();
 
-       return MaterialApp(
-          themeMode: isLightThemeEnabled ? ThemeMode.light : ThemeMode.dark,
-          // other properties
-          );
-         }
-       }
-
-4. **Using `ref.read(...)`:**
+3. **Using `ref.read(...)`:**
    - `read` accesses the current state of a provider without listening to its changes. It’s typically used in event handlers where you don’t need to rebuild the UI.
    - In this example, `read` is used to toggle the state of `isLightTheme` when the floating action button is pressed.
 
-5. **Using `ref.watch(...)`:**
-   - `watch` is used inside the build method to listen to changes in the state. When you watch a provider, it automatically rebuilds the widget when the state changes.
+    ```dart
+    FloatingActionButton(
+     onPressed: () {
+      ref.read(isLightTheme.state).state = !ref.read(isLightTheme.state).state;
+       },
+      child: Icon(Icons.brightness_6),
+      );
 
-6. **Using `themeMode` in `MaterialApp`:**
+4. **Using `ref.watch(...)`:**
+   - `watch` is used inside the build method to listen to changes in the state. When you watch a provider, it automatically rebuilds the widget when the state changes.
+  
+    ```dart
+    final isLightThemeEnabled = ref.watch(isLightTheme);
+
+5. **Using `themeMode` in `MaterialApp`:**
    - Dynamically switch between light and dark themes based on the observed state.
 
 ## **Part 2: Using `Consumer`**
