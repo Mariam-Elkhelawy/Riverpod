@@ -2,6 +2,10 @@
 
 This repository focuses on Riverpod state management, specifically through two different approaches: `ConsumerWidget` and `Consumer`. This is part of my **Advanced Flutter Challenge: 20 Steps to Enhance My Skills**.
 
+## Screenshots
+
+<img src = "https://github.com/user-attachments/assets/98cb35de-99cb-45b4-b88b-ba490edd630f" height = 400> &emsp; <img src = "https://github.com/user-attachments/assets/153af654-7cab-4d5f-910b-ebf0b1e13657"  height = 400>  &emsp; 
+
 ## **Part 1: Using `ConsumerWidget`**
 
 In this part, we explore state management in Flutter using Riverpod with `ConsumerWidget`. This approach rebuilds the entire screen whenever there's a state change.
