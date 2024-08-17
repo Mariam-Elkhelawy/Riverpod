@@ -43,11 +43,16 @@ In this part, we explore state management in Flutter using Riverpod with `Consum
 4. **Using `ref.watch(...)`:**
    - `watch` is used inside the build method to listen to changes in the state. When you watch a provider, it automatically rebuilds the widget when the state changes.
   
-    ```dart
-    final isLightThemeEnabled = ref.watch(isLightTheme);
+     ```dart
+     final isLightThemeEnabled = ref.watch(isLightTheme);
 
 5. **Using `themeMode` in `MaterialApp`:**
    - Dynamically switch between light and dark themes based on the observed state.
+      
+     ```dart
+      return MaterialApp(
+         themeMode: ref.watch(isLightTheme ? ThemeMode.light : ThemeMode.dark,
+           );
 
 ## **Part 2: Using `Consumer`**
 
