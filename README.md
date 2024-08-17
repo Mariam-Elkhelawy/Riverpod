@@ -26,8 +26,6 @@ In this part, we explore state management in Flutter using Riverpod with `Consum
 5. **Using `themeMode` in `MaterialApp`:**
    - Dynamically switch between light and dark themes based on the observed state.
 
-🔗 **Check out Part 2 of this challenge** where I dive into another method of state management using `Consumer`. [Link to Part 2](#)
-
 ### **Part 2: Using `Consumer`**
 
 In this part, we explore another method using Riverpod: `Consumer`. This approach allows you to rebuild only specific parts of the UI, improving efficiency.
@@ -52,7 +50,6 @@ In this part, we explore another method using Riverpod: `Consumer`. This approac
 **Note:**
 While `Consumer` is effective for updating specific sections of the UI, using `ConsumerWidget` is better suited for global changes like updating the theme. It ensures that the entire application reflects the new theme properly and consistently. I used `Consumer` here as an example to demonstrate its functionality, but it’s not the best approach for theme changes.
 
-🔗 **Explore the full code examples for both methods on GitHub:** [Link to GitHub Repository](#)
 
 ## Getting Started
 
