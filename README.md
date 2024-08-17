@@ -4,7 +4,7 @@ Welcome to the Advanced Flutter Challenge repository! This challenge consists of
 
 ## Challenge 2: Riverpod State Management
 
-### **Part 1: Using `ConsumerWidget`**
+## **Part 1: Using `ConsumerWidget`**
 
 In this part, we explore state management in Flutter using Riverpod with `ConsumerWidget`. This approach rebuilds the entire screen whenever there's a state change.
 
@@ -26,7 +26,7 @@ In this part, we explore state management in Flutter using Riverpod with `Consum
 5. **Using `themeMode` in `MaterialApp`:**
    - Dynamically switch between light and dark themes based on the observed state.
 
-### **Part 2: Using `Consumer`**
+## **Part 2: Using `Consumer`**
 
 In this part, we explore another method using Riverpod: `Consumer`. This approach allows you to rebuild only specific parts of the UI, improving efficiency.
 
