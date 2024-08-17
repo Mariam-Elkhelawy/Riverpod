@@ -63,17 +63,50 @@ In this part, we explore another method using Riverpod: `Consumer`. This approac
 1. **Defining the `ChangeNotifierProvider`:**
    We define a `ChangeNotifierProvider` to manage the theme state. This provider encapsulates the logic needed to toggle between light and dark modes.
 
+     ```dart
+      final isLightTheme0 = ChangeNotifierProvider<RiverpodModel>((ref) => RiverpodModel(isLight: true));
+
+
 2. **Creating the `ChangeNotifier` Class:**
    We create a `ChangeNotifier` class that handles the state and provides a method to toggle the theme. This class also notifies listeners whenever there’s a change.
+
+      ```dart
+      class RiverpodModel extends ChangeNotifier {
+         bool isLight;
+       RiverpodModel({required this.isLight});
+         void toggleTheme() {
+            isLight = !isLight;
+          notifyListeners();
+                  }
+                }
 
 3. **Building the UI with `Consumer`:**
    Instead of using `ConsumerWidget`, we utilize the `Consumer` widget directly within a `StatelessWidget`. This allows us to rebuild only the parts of the UI that need to update based on state changes. For instance, `Consumer` is used to wrap only the UI elements affected by the theme change.
 
+     ```dart
+     class HomeScreen extends StatelessWidget {
+     const HomeScreen({super.key});
+         @override
+        Widget build(BuildContext context) {
+          return Scaffold(
+            body: Consumer(
+            builder: (context, ref, child) {}
+             }
+           }
+
 4. **Using `ref.read(...)`:**
    - This method changes the theme without causing a full rebuild of the screen.
+  
+       ```dart
+       ref.read(isLightTheme0).toggleTheme();
+
 
 5. **Using `ref.watch(...)`:**
    - This ensures that only the UI elements wrapped by `Consumer` rebuild when the state changes.
+
+       
+       ```dart
+       final isLightThemeEnabled = ref.watch(isLightTheme0).isLight;
 
 
 ## **Note:**
