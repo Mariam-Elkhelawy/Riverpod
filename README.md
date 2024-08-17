@@ -56,5 +56,10 @@ While `Consumer` is effective for updating specific sections of the UI, using `C
 1. Clone this repository:
 
    ```bash
-   git clone https://github.com/yourusername/advanced-flutter-challenge.git
+   git clone https://github.com/Mariam-Elkhelawy/Riverpod-StateManagement
+
+2. Navigate to the project directory:
+
+   ```bash
+cd Riverpod-StateManagement
 
