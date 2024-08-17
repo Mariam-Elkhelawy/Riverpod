@@ -32,14 +32,13 @@ In this part, we explore state management in Flutter using Riverpod with `Consum
    - `read` accesses the current state of a provider without listening to its changes. It’s typically used in event handlers where you don’t need to rebuild the UI.
    - In this example, `read` is used to toggle the state of `isLightTheme` when the floating action button is pressed.
 
-
-    ```dart
-    FloatingActionButton(
-     onPressed: () {
-      ref.read(isLightTheme.state).state = !ref.read(isLightTheme.state).state;
-       },
-      child: Icon(Icons.brightness_6),
-      );
+     ```dart
+     FloatingActionButton(
+      onPressed: () {
+       ref.read(isLightTheme.state).state = !ref.read(isLightTheme.state).state;
+        },
+       child: Icon(Icons.brightness_6),
+       );
 
 4. **Using `ref.watch(...)`:**
    - `watch` is used inside the build method to listen to changes in the state. When you watch a provider, it automatically rebuilds the widget when the state changes.
