@@ -100,14 +100,11 @@ In this part, we explore another method using Riverpod: `Consumer`. This approac
        ```dart
        ref.read(isLightTheme0).toggleTheme();
 
-
 5. **Using `ref.watch(...)`:**
    - This ensures that only the UI elements wrapped by `Consumer` rebuild when the state changes.
-
-       
+     
        ```dart
        final isLightThemeEnabled = ref.watch(isLightTheme0).isLight;
-
 
 ## **Note:**
 While `Consumer` is effective for updating specific sections of the UI, using `ConsumerWidget` is better suited for global changes like updating the theme. It ensures that the entire application reflects the new theme properly and consistently. I used `Consumer` here as an example to demonstrate its functionality, but it’s not the best approach for theme changes.
