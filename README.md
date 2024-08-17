@@ -62,4 +62,13 @@ While `Consumer` is effective for updating specific sections of the UI, using `C
 
    ```bash
    cd Riverpod-StateManagement
+   
+3. Install dependencies:
 
+   ```bash
+   flutter pub get
+
+4. Run the application:
+
+   ```bash
+   flutter run
